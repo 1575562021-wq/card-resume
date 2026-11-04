@@ -13,11 +13,6 @@ function PlatformGlyph({ kind }: { kind: PlatformBlock['platformKind'] }) {
 export default function App() {
   const [opened, setOpened] = useState(false)
 
-  const contactQrValue = useMemo(
-    () => `MECARD:N:${profile.nameZh},${profile.nameEn};TEL:${profile.phone};NOTE:${profile.roles.join(' / ')};`,
-    [],
-  )
-
   const scanQrs = useMemo(() => {
     const fromBlocks = sections.flatMap((section) =>
       section.blocks
@@ -66,9 +61,10 @@ export default function App() {
               </a>
             </div>
 
-            <div className="contact-qr">
-              <QrCode value={contactQrValue} label="联系我" size={72} />
-            </div>
+            <figure className="contact-qr">
+              <img src={profile.wechatQr} alt="微信二维码" width={72} height={72} />
+              <figcaption>微信</figcaption>
+            </figure>
           </header>
 
           <div className="card-body">

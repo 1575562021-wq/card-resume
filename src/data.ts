@@ -26,6 +26,7 @@ export const profile = {
   nameEn: 'Zoey',
   phone: '15319267816',
   photo: './zoey.jpg',
+  wechatQr: './wechat-qr.jpg',
   roles: ['AI内容运营', '产品经理'] as const,
 }
 

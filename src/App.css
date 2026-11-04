@@ -249,19 +249,29 @@ a:focus-visible {
 }
 
 .contact-qr {
+  margin: 0;
   justify-self: end;
-}
-
-.contact-qr .qr-item {
+  display: grid;
+  justify-items: center;
   gap: 0.18rem;
 }
 
-.contact-qr img,
-.contact-qr .qr-placeholder {
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.55);
+.contact-qr img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #fff;
   padding: 3px;
   box-sizing: content-box;
+  box-shadow: 0 0 0 1px rgba(27, 42, 65, 0.08);
+  display: block;
+}
+
+.contact-qr figcaption {
+  font-size: 0.58rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
 }
 
 .card-body {
