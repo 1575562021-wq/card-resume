@@ -1,0 +1,43 @@
+:root {
+  --navy: #1b2a41;
+  --gold: #c9a86c;
+  --gold-deep: #9a7a42;
+  --ink: #1f2430;
+  --ink-soft: #3d4554;
+  --ink-muted: #6b7382;
+  --font-display: 'Fraunces', 'Songti SC', 'Noto Serif SC', serif;
+  --font-body: 'Outfit', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: var(--ink);
+  background: #c5ced8;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
