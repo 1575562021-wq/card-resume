@@ -21,21 +21,27 @@
 .resume-card {
   position: relative;
   z-index: 1;
-  width: min(100%, 420px);
-  border-radius: clamp(18px, 4vw, 24px);
+  width: min(100%, 460px);
+  border-radius: clamp(18px, 4vw, 26px);
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .seal-card,
   .resume-card {
-    width: min(100%, 520px);
+    width: min(100%, 560px);
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
   .resume-card {
-    width: min(100%, 580px);
+    width: min(100%, 640px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .resume-card {
+    width: min(100%, 700px);
   }
 }
 
@@ -64,7 +70,7 @@
 
 .seal-site {
   margin: 0 0 0.95rem;
-  font-size: 12px;
+  font-size: 0.8125rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -104,7 +110,7 @@
 .seal-title span {
   display: block;
   margin-top: 0.28rem;
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -114,8 +120,8 @@
 .seal-sub {
   margin: 0.7rem 0 1.15rem;
   color: var(--ink-muted);
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0.06em;
 }
 
@@ -126,7 +132,7 @@
   background: var(--navy);
   color: #f7f3ea;
   font: inherit;
-  font-size: 13px;
+  font-size: 1rem;
   letter-spacing: 0.14em;
   padding: 0.62rem 1.2rem;
   border-radius: 999px;
@@ -159,7 +165,7 @@ a:focus-visible {
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.75) inset,
     0 18px 42px rgba(27, 42, 65, 0.18);
-  padding: clamp(0.85rem, 2.2vw, 1.2rem);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
   animation: unfold 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   transform-origin: 50% 8%;
 }
@@ -175,10 +181,10 @@ a:focus-visible {
 
 .card-header {
   display: grid;
-  grid-template-columns: clamp(72px, 18vw, 96px) minmax(0, 1fr) auto;
-  gap: clamp(0.55rem, 1.8vw, 0.9rem);
+  grid-template-columns: clamp(88px, 16vw, 120px) minmax(0, 1fr) auto;
+  gap: clamp(0.7rem, 2vw, 1.1rem);
   align-items: center;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.95rem;
   border-bottom: 1px solid rgba(27, 42, 65, 0.08);
 }
 
@@ -186,9 +192,9 @@ a:focus-visible {
   appearance: none;
   border: 0;
   padding: 0;
-  width: clamp(72px, 18vw, 96px);
+  width: clamp(88px, 16vw, 120px);
   aspect-ratio: 1;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   background: #d7d0c4;
   box-shadow:
@@ -216,10 +222,10 @@ a:focus-visible {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.28rem 0.2rem;
+  padding: 0.35rem 0.2rem;
   background: linear-gradient(transparent, rgba(27, 42, 65, 0.72));
   color: #f7f3ea;
-  font-size: 10px;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-align: center;
 }
@@ -229,8 +235,8 @@ a:focus-visible {
 }
 
 .site-chip {
-  margin: 0 0 0.28rem;
-  font-size: 11px;
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold-deep);
@@ -239,7 +245,7 @@ a:focus-visible {
 .identity h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3.6vw, 1.7rem);
+  font-size: clamp(1.55rem, 3.8vw, 2rem);
   font-weight: 650;
   color: var(--navy);
   letter-spacing: 0.02em;
@@ -249,7 +255,7 @@ a:focus-visible {
 .identity .en {
   display: inline-block;
   margin-left: 0.35rem;
-  font-size: 13px;
+  font-size: 0.9375rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -258,9 +264,9 @@ a:focus-visible {
 }
 
 .role-line {
-  margin: 0.32rem 0 0.4rem;
+  margin: 0.4rem 0 0.45rem;
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 1rem;
   letter-spacing: 0.02em;
 }
 
@@ -270,7 +276,7 @@ a:focus-visible {
   gap: 0.28rem;
   color: var(--navy);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -293,8 +299,8 @@ a:focus-visible {
 }
 
 .contact-qr img {
-  width: clamp(64px, 14vw, 78px);
-  height: clamp(64px, 14vw, 78px);
+  width: clamp(72px, 12vw, 88px);
+  height: clamp(72px, 12vw, 88px);
   object-fit: cover;
   border-radius: 10px;
   background: #fff;
@@ -307,32 +313,32 @@ a:focus-visible {
 }
 
 .contact-qr figcaption {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: var(--ink-soft);
   letter-spacing: 0.04em;
 }
 
 .card-body {
   display: grid;
-  gap: 0.85rem;
-  padding: 0.8rem 0 0.4rem;
-  font-size: 13px;
+  gap: 1rem;
+  padding: 0.95rem 0 0.45rem;
+  font-size: 1rem;
 }
 
 .role-section h2 {
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.55rem;
   display: flex;
   align-items: baseline;
-  gap: 0.45rem;
+  gap: 0.5rem;
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: clamp(1.125rem, 2.2vw, 1.25rem);
   font-weight: 650;
   color: var(--navy);
 }
 
 .role-label {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -366,7 +372,7 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.28rem;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 560;
   color: var(--navy);
 }
@@ -390,7 +396,7 @@ a:focus-visible {
 }
 
 .type {
-  font-size: 12px;
+  font-size: 0.875rem;
   letter-spacing: 0.06em;
   color: var(--ink-muted);
 }
@@ -423,8 +429,8 @@ a:focus-visible {
 .link-title {
   flex: 1;
   min-width: 0;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.45;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -432,7 +438,7 @@ a:focus-visible {
 
 .link-arrow {
   color: var(--gold-deep);
-  font-size: 13px;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
@@ -446,11 +452,11 @@ a:focus-visible {
 }
 
 .skills li {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: var(--navy);
   border: 1px solid rgba(27, 42, 65, 0.12);
   background: rgba(255, 255, 255, 0.4);
-  padding: 0.14rem 0.45rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 999px;
   letter-spacing: 0.02em;
 }
@@ -466,7 +472,7 @@ a:focus-visible {
 .qr-strip-title {
   margin: 0 0 0.45rem;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-muted);
@@ -510,7 +516,7 @@ a:focus-visible {
 }
 
 .qr-item figcaption {
-  font-size: 11px;
+  font-size: 0.8125rem;
   color: var(--ink-soft);
   letter-spacing: 0.02em;
   text-align: center;
@@ -531,9 +537,9 @@ a:focus-visible {
   background: transparent;
   color: var(--navy);
   border-color: rgba(27, 42, 65, 0.18);
-  padding: 0.4rem 0.95rem;
+  padding: 0.45rem 1rem;
   letter-spacing: 0.1em;
-  font-size: 12px;
+  font-size: 0.9375rem;
 }
 
 .fold-btn:hover {
@@ -591,7 +597,7 @@ a:focus-visible {
 .photo-lightbox-tip {
   margin: 0;
   color: rgba(247, 243, 234, 0.85);
-  font-size: 12px;
+  font-size: 0.875rem;
   letter-spacing: 0.08em;
 }
 
@@ -601,8 +607,8 @@ a:focus-visible {
   background: rgba(247, 243, 234, 0.12);
   color: #f7f3ea;
   border-radius: 999px;
-  padding: 0.45rem 1rem;
-  font-size: 13px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   cursor: pointer;
 }
@@ -656,14 +662,14 @@ a:focus-visible {
 
 @media (max-width: 560px) {
   .card-header {
-    grid-template-columns: 78px minmax(0, 1fr);
+    grid-template-columns: 92px minmax(0, 1fr);
     grid-template-areas:
       'photo identity'
       'qr qr';
   }
 
   .photo-frame {
-    width: 78px;
+    width: 92px;
     grid-area: photo;
   }
 

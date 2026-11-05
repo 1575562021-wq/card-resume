@@ -5,13 +5,14 @@
   --ink: #1f2430;
   --ink-soft: #3d4554;
   --ink-muted: #6b7382;
-  --font-display: 'Fraunces', 'Songti SC', 'Noto Serif SC', serif;
-  --font-body: 'Outfit', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  /* Display keeps Fraunces; body uses Song-style close to 方正小标宋 */
+  --font-display: 'Fraunces', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --font-body: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
   color: var(--ink);
   background: #c5ced8;
   font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: clamp(16px, 1.15vw + 14px, 17px);
+  line-height: 1.55;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
