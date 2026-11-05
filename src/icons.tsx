@@ -5,17 +5,23 @@ type IconProps = {
 
 export function ZhihuIcon({ className, title = '知乎' }: IconProps) {
   return (
-    <svg className={className} viewBox="0 0 24 24" aria-hidden={title ? undefined : true} role="img">
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden={title ? undefined : true}
+      role="img"
+    >
       {title ? <title>{title}</title> : null}
-      <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" />
+      <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="3" stroke="currentColor" strokeWidth="1.5" />
       <text
         x="12"
-        y="16.2"
+        y="15.5"
         textAnchor="middle"
-        fontSize="11"
-        fontWeight="700"
+        fontSize="10"
+        fontWeight="500"
         fontFamily="serif"
-        fill="#fff"
+        fill="currentColor"
       >
         知
       </text>
@@ -46,13 +52,13 @@ export function LinkIcon({ className, title = '链接' }: IconProps) {
       <path
         d="M10 13a5 5 0 0 0 7.07.07l1.41-1.41a5 5 0 0 0-7.07-7.07L10 5.9"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.5"
         strokeLinecap="round"
       />
       <path
         d="M14 11a5 5 0 0 0-7.07-.07L5.52 12.34a5 5 0 0 0 7.07 7.07L14 18.1"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.5"
         strokeLinecap="round"
       />
     </svg>
@@ -66,7 +72,7 @@ export function PhoneIcon({ className, title = '电话' }: IconProps) {
       <path
         d="M7.2 3.8h2.3l1.1 3.2-1.5 1.1a12.4 12.4 0 0 0 5.3 5.3l1.1-1.5 3.2 1.1v2.3c0 .7-.5 1.3-1.2 1.4A14.6 14.6 0 0 1 3.8 7c.1-.7.7-1.2 1.4-1.2Z"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinejoin="round"
       />
     </svg>

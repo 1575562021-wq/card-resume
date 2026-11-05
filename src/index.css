@@ -1,18 +1,27 @@
 :root {
+  /* Warm paper world + navy/gold from portrait */
+  --page: #f3f0ea;
+  --card: #fbf8f2;
+  --raised: #f0ebe3;
+  --hairline: rgba(31, 27, 22, 0.08);
+  --ink: #1f1b16;
+  --ink-soft: #5e554a;
+  --ink-muted: #7b7266;
   --navy: #1b2a41;
-  --gold: #c9a86c;
-  --gold-deep: #9a7a42;
-  --ink: #1f2430;
-  --ink-soft: #3d4554;
-  --ink-muted: #6b7382;
-  /* Display keeps Fraunces; body uses Song-style close to 方正小标宋 */
-  --font-display: 'Fraunces', 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --gold: #9a7a42;
+  --font-display: 'Fraunces', 'Noto Serif SC', 'Songti SC', serif;
   --font-body: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius-card: 16px;
+  --radius-control: 8px;
+  --radius-tag: 6px;
+
   color: var(--ink);
-  background: #c5ced8;
+  background: var(--page);
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.15vw + 14px, 17px);
+  font-size: clamp(16px, 0.4vw + 15.2px, 17px);
   line-height: 1.55;
+  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -5,21 +5,19 @@ import { QrCode } from './QrCode'
 import './App.css'
 
 function PlatformGlyph({ kind }: { kind: PlatformBlock['platformKind'] }) {
-  if (kind === 'zhihu') return <ZhihuIcon className="platform-icon zhihu" />
-  if (kind === 'wechat') return <WeChatIcon className="platform-icon wechat" />
-  return <LinkIcon className="platform-icon web" />
+  if (kind === 'zhihu') return <ZhihuIcon className="platform-icon" />
+  if (kind === 'wechat') return <WeChatIcon className="platform-icon" />
+  return <LinkIcon className="platform-icon" />
 }
 
 function ProtectedPhoto({
   src,
   alt,
   className,
-  onOpen,
 }: {
   src: string
   alt: string
   className?: string
-  onOpen?: () => void
 }) {
   return (
     <img
@@ -29,7 +27,6 @@ function ProtectedPhoto({
       draggable={false}
       onDragStart={(event) => event.preventDefault()}
       onContextMenu={(event) => event.preventDefault()}
-      onClick={onOpen}
     />
   )
 }
@@ -62,8 +59,6 @@ export default function App() {
 
   return (
     <div className={`stage ${opened ? 'is-open' : 'is-closed'}`}>
-      <div className="atmosphere" aria-hidden="true" />
-
       {!opened ? (
         <section className="seal-card" aria-label="开启简历">
           <p className="seal-site">{siteName}</p>
@@ -74,7 +69,7 @@ export default function App() {
             {profile.nameZh}
             <span>{profile.nameEn}</span>
           </h1>
-          <p className="seal-sub">明信片手卡 · 点击开启</p>
+          <p className="seal-sub">纸质简历卡，点击展开</p>
           <button type="button" className="open-btn" onClick={() => setOpened(true)}>
             展开手卡
           </button>
@@ -89,7 +84,7 @@ export default function App() {
               onClick={() => setPhotoOpen(true)}
             >
               <ProtectedPhoto src={profile.photo} alt={`${profile.nameZh} 简历照`} />
-              <span className="photo-hint">点击放大</span>
+              <span className="photo-hint">放大</span>
             </button>
 
             <div className="identity">
@@ -109,8 +104,8 @@ export default function App() {
               <img
                 src={profile.wechatQr}
                 alt="微信二维码"
-                width={72}
-                height={72}
+                width={80}
+                height={80}
                 draggable={false}
                 onContextMenu={(event) => event.preventDefault()}
               />
@@ -169,7 +164,7 @@ export default function App() {
             <div className="qr-row">
               {scanQrs.map((item) => (
                 <a key={item.href} href={item.href} target="_blank" rel="noreferrer" className="qr-link">
-                  <QrCode value={item.href} label={item.label} size={52} />
+                  <QrCode value={item.href} label={item.label} size={56} />
                 </a>
               ))}
             </div>
@@ -196,7 +191,7 @@ export default function App() {
               <ProtectedPhoto src={profile.photo} alt={`${profile.nameZh} 简历照大图`} />
               <div className="photo-guard" aria-hidden="true" />
             </div>
-            <p className="photo-lightbox-tip">预览模式 · 禁止保存</p>
+            <p className="photo-lightbox-tip">仅预览，不可保存</p>
             <button type="button" className="photo-close" onClick={() => setPhotoOpen(false)}>
               关闭
             </button>
